@@ -6,7 +6,7 @@ require './lib/batter.rb'
 require './lib/topping.rb'
 require './lib/item_things.rb'
 
-class StoreTest<Minitest::Test
+class ItemTest<Minitest::Test
 
   def setup
     item_data = {

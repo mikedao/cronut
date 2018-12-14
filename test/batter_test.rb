@@ -4,7 +4,7 @@ require 'pry'
 require './lib/batter.rb'
 require './lib/item_things.rb'
 
-class StoreTest<Minitest::Test
+class BatterTest<Minitest::Test
 
   def setup
     batter_data = { "id": "1001", "type": "Regular" }
