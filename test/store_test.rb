@@ -6,6 +6,7 @@ require './lib/item.rb'
 require './lib/batter.rb'
 require './lib/topping.rb'
 require './lib/item_things.rb'
+require './lib/json_adapter.rb'
 
 class StoreTest<Minitest::Test
 

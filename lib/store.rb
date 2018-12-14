@@ -15,9 +15,10 @@ class Store
     end
   end
 
+  private
+
   def read_json
-    json_file = File.read('./data/cronut.json')
-    JSON.parse(json_file, symbolize_names: true)
+    JsonAdapter.new.get_json('./data/cronut.json')
   end
 
 end
