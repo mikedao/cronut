@@ -22,14 +22,14 @@ class Item
 
   def self.read_from_json(file)
     read_file = File.read(file)
-    items_hash = JSON.parse(read_file)["items"]["item"]
+    items_hash = JSON.parse(read_file, symbolize_names: true)[:items][:item]
     items = items_hash.map do |item|
-      Item.new(item["id"],
-              item["type"],
-              item["name"],
-              item["ppu"],
-              Batter.parse(item["batters"]["batter"]),
-              Topping.parse(item["topping"]),
+      Item.new(item[:id],
+              item[:type],
+              item[:name],
+              item[:ppu],
+              Batter.parse(item[:batters][:batter]),
+              Topping.parse(item[:topping]),
               )
     end
   end

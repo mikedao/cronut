@@ -1,16 +1,5 @@
-class Topping
-  attr_reader :id,
-              :type
+require './lib/ingredient.rb'
 
-  def initialize(id, type)
-    @id = id
-    @type = type
-  end
+class Topping < Ingredient
 
-  def self.parse(topping_array)
-    topping_array.map do |topping|
-      Topping.new(topping["id"],
-                topping["type"])
-    end
-  end
 end

@@ -1,16 +1,5 @@
-class Batter
-  attr_reader :id,
-              :type
+require './lib/ingredient.rb'
 
-  def initialize(id, type)
-    @id = id
-    @type = type
-  end
+class Batter < Ingredient
 
-  def self.parse(batter_array)
-    batter_array.map do |batter|
-      Batter.new(batter["id"],
-                batter["type"])
-    end
-  end
 end
