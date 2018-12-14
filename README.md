@@ -20,6 +20,8 @@ of `Topping` objects that have the attributes of id and type.
 
 Bonus: How can you use inheritance here?
 
+-I created a class, ItemThings, that both Batter and Topping inherited from. It included the def initialize to parse the incoming hash data from the JSON, assign the id and type to instance variables, and attr_readers to be able to access the data. Unless we add unique functionality to Batter or Topping, with my inherited class, neither class needs any extra code within them.
+
 Submit your PR here at 11:30:
 
 [Submission Link](https://goo.gl/forms/s5JSonFHMcWqhCGq2)
