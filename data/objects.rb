@@ -15,8 +15,3 @@ def make_item_array(data_hash)
     Item.new(item_hash)
   end
 end
-
-
-def make_batter_array(batter_array)
-
-end

@@ -1,3 +1,5 @@
+require './objects/Batter'
+
 class Item
 
   attr_reader :id, :type, :name, :ppu, :batters
@@ -7,7 +9,13 @@ class Item
     @type = item_hash["type"]
     @name = item_hash["name"]
     @ppu = item_hash["ppu"]
-    @batters = []
+    # @batters = make_batter_array(item_hash["batters"])
   end
+
+  # def make_batter_array(batter_array)
+  #   batter_array.map do |batter_hash|
+  #     Batter.new(batter_hash)
+  #   end
+  # end
 
 end
