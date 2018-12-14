@@ -42,13 +42,16 @@ class ItemTest<Minitest::Test
     assert_equal 0.55, @item.ppu
   end
 
-  def test_it_generates_batters
+  def test_it_can_generate_batters
+    @item.add_batters
     assert_equal 4, @item.batter.count
     assert_equal "1001", @item.batter.first.id
     assert_equal "Regular", @item.batter.first.type
   end
 
-  def test_it_generates_toppings
+  def test_it_can_generate_toppings
+    @item.add_toppings
+
     assert_equal 7, @item.toppings.count
     assert_equal "5001", @item.toppings.first.id
     assert_equal "None", @item.toppings.first.type

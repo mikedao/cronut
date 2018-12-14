@@ -8,7 +8,10 @@ class Store
 
   def generate_pastries
     read_json[:items][:item].each do |item_data|
-      @pastries << Item.new(item_data)
+      new_item = Item.new(item_data)
+      new_item.add_batters
+      new_item.add_toppings
+      @pastries << new_item
     end
   end
 
